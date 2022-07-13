@@ -8,9 +8,8 @@ const App = () => {
   const [movies, setMovies] = useState([]);
   const [searchTerm, setSearchTerm] = useState("");
   const searchMovie = async (title) => {
-    const res = await fetch(`${API_URL}&s=${title}`);
+    const res = await fetch(`${API_URL}&s=${title}`)
     const data = await res.json();
-    console.log(data);
     setMovies(data.Search);
   };
 
@@ -34,7 +33,6 @@ const App = () => {
             src={searchIcon}
             alt="search"
             onClick={() => {
-              alert("called");
               searchMovie(searchTerm);
             }}
           />
