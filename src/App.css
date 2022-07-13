@@ -14,118 +14,97 @@
 
 body {
   font-family: var(--font-roboto);
-  background-color: #212426;
+  background-color: #687186;
 }
 
 .app {
-  padding: 4rem;
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
+  padding: 2rem;
 }
 
 h1 {
-  font-size: 3rem;
+  font-size: 3.5rem;
   letter-spacing: 0.9px;
   background: linear-gradient(
-    90deg,
-    rgba(249, 211, 180, 1) 0%,
-    rgba(249, 211, 180, 0) 100%
+    45deg,
+    rgba(19, 22, 23, 1) 0%,
+    rgba(41, 52, 69, 0.6) 100%
   );
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   width: fit-content;
+  padding: 0rem 4rem;
 }
-
 .search {
-  width: 71%;
-  margin: 4rem 0 2rem;
+  width: 30%;
+  margin: 2.5rem 0 2rem;
 
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
 
-  padding: 1.5rem 1.75rem;
-  border-radius: 3rem;
+  padding: 1rem 3rem;
+  border-radius: 2rem;
   background: #1f2123;
-  -webkit-box-shadow: 5px 5px 7px #1c1d1f, -5px -5px 7px #222527;
-  box-shadow: 5px 5px 7px #1c1d1f, -5px -5px 7px #222527;
+  /* -webkit-box-shadow: 5px 5px 7px #1c1d1f, -5px -5px 7px #222527;
+  box-shadow: 0px 0px 1px #1c1d1f, -5px -5px 7px #222527; */
 }
 
 .search input {
-  flex: 1;
   border: none;
   font-size: 1.5rem;
   font-family: var(--font-raleway);
   font-weight: 500;
   padding-right: 1rem;
-
   outline: none;
-  color: #a1a1a1;
+  color: #aaab94;
   background: #1f2123;
 }
 
 .search img {
-  width: 35px;
-  height: 35px;
+  width: 40px;
+  height: 40px;
   cursor: pointer;
 }
 
-/* .search button {
-  padding: 20px 40px;
-  border-radius: 0.5rem;
-  margin-left: 15px;
-  color: #a1a1a1;
-  font-family: var(--font-raleway);
-  font-weight: 900;
-  letter-spacing: 0.75px;
-  font-size: 1.25rem;
-  cursor: pointer;
-  background: #1f2123;
-  -webkit-box-shadow: 5px 5px 7px #1c1d1f, -5px -5px 7px #222527;
-  box-shadow: 5px 5px 7px #1c1d1f, -5px -5px 7px #222527;
-} */
+.header{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
 
 .empty {
   width: 100%;
   margin-top: 3rem;
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  text-align: center;
 }
 
 .empty h2 {
-  font-size: 1.25rem;
-  color: #f9d3b4;
+  font-size: 1.75rem;
+  color: #b1dcd9;
   font-family: var(--font-raleway);
 }
 
 .container {
   width: 100%;
-  margin-top: 3rem;
-
+  margin-top: 1rem;
   display: flex;
-  justify-content: center;
+  justify-content:center;
   align-items: center;
   flex-wrap: wrap;
 }
 
 .movie {
-  width: 310px;
-  height: 460px;
-  margin: 1.5rem;
+  width: 275px;
+  height: 400px;
+  margin: 1.75rem;
 
   position: relative;
   border-radius: 12px;
-  overflow: hidden;
+  overflow:hidden;
   border: none;
-
-  transition: all 0.4s cubic-bezier(0.175, 0.885, 0, 1);
-  box-shadow: 0px 13px 10px -7px rgba(0, 0, 0, 0.1);
+  box-shadow: 10px 13px 10px -5px rgba(0, 0, 0, 0.9);
 }
 
 .movie div:nth-of-type(1) {
@@ -134,12 +113,11 @@ h1 {
   width: 100%;
   opacity: 0;
   top: 0;
-  color: #f9d3b4;
+  /* color: #f9d3b4; */
 }
 
 .movie:hover {
-  box-shadow: 0px 30px 18px -8px rgba(0, 0, 0, 0.1);
-  transform: scale(1.05, 1.05);
+  transform: scale(1.03);
 }
 
 .movie div:nth-of-type(2) {
@@ -154,41 +132,34 @@ h1 {
 
 .movie div:nth-of-type(3) {
   z-index: 2;
-  background-color: #343739;
+  background-color: #544252;
   padding: 16px 24px 24px 24px;
 
+  display: flex;
+  flex-direction: column;
   position: absolute;
   bottom: 0;
   right: 0;
   left: 0;
 }
 
-.movie div:nth-of-type(3) span {
+.movie div:nth-of-type(3) p,span {
   font-family: "Raleway", sans-serif;
   text-transform: uppercase;
   font-size: 13px;
   letter-spacing: 2px;
   font-weight: 500;
   color: #f0f0f0;
+  margin-bottom: 3px;
 }
 
 .movie div:nth-of-type(3) h3 {
-  margin-top: 5px;
   font-family: "Roboto Slab", serif;
   color: #f9d3b4;
 }
 
-.movie:hover div:nth-of-type(2) {
-  height: 100%;
-  opacity: 0.3;
-}
-
-.movie:hover div:nth-of-type(3) {
-  background-color: transparent;
-}
-
-.movie:hover div:nth-of-type(1) {
-  opacity: 1;
+.movie:hover div:nth-of-type(3){
+  opacity: 0;
 }
 
 @media screen and (max-width: 600px) {
@@ -209,6 +180,12 @@ h1 {
     width: 20px;
     height: 20px;
   }
+  .header{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+  }
 }
 
 @media screen and (max-width: 400px) {
@@ -227,5 +204,11 @@ h1 {
   .movie {
     width: "100%";
     margin: 1rem;
+  }
+  .header{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
   }
 }
