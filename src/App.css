@@ -46,8 +46,6 @@ h1 {
   padding: 1rem 3rem;
   border-radius: 2rem;
   background: #1f2123;
-  /* -webkit-box-shadow: 5px 5px 7px #1c1d1f, -5px -5px 7px #222527;
-  box-shadow: 0px 0px 1px #1c1d1f, -5px -5px 7px #222527; */
 }
 
 .search input {
@@ -113,7 +111,6 @@ h1 {
   width: 100%;
   opacity: 0;
   top: 0;
-  /* color: #f9d3b4; */
 }
 
 .movie:hover {
